@@ -88,35 +88,37 @@
 
 
         /* Lightbox - Fundo escuro */
-.lightbox {
-    display: none; /* Inicialmente oculto */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
+        .lightbox {
+            display: none;
+            /* Inicialmente oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            /* Fundo escuro semi-transparente */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
 
-/* Imagem expandida */
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-}
+        /* Imagem expandida */
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
 
-/* Botão de fechar */
-.lightbox .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
+        /* Botão de fechar */
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
 
 
         .back-button {
@@ -149,7 +151,8 @@
         <div class="gallery">
             <div class="gallery-item single-image">
                 <h3 class="gallery-title">Fundador</h3>
-                <p class="gallery-description">Roberto Santos tem ampla experiência em mecânica de motores ciclo Diesel e Otto, além de expertise em funilaria e pintura automotiva.</p>
+                <p class="gallery-description">Roberto Santos tem ampla experiência em mecânica de motores ciclo Diesel
+                    e Otto, além de expertise em funilaria e pintura automotiva.</p>
                 <div class="image-single">
                     <img src="../imagens/sobre/fundador.jpg" alt="Destaque Especial" onclick="expandirImagem(this)">
                 </div>
@@ -160,7 +163,8 @@
                     manutenção para o seu carro.</p>
                 <div class="image-grid">
                     <img src="../imagens/sobre/trabalhos/astra.jpg" alt="Serviço 1" onclick="expandirImagem(this)">
-                    <img src="../imagens/sobre/trabalhos/passat_variant.jpg" alt="Serviço 2" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/passat_variant.jpg" alt="Serviço 2"
+                        onclick="expandirImagem(this)">
                     <img src="../imagens/sobre/trabalhos/gol1.jpg" alt="Serviço 3" onclick="expandirImagem(this)">
                     <img src="../imagens/sobre/trabalhos/gol2.jpg" alt="Serviço 4" onclick="expandirImagem(this)">
                 </div>
@@ -182,7 +186,8 @@
                 <p class="gallery-description">Nosso espaço é equipado com tecnologia de ponta para oferecer um serviço
                     eficiente e seguro.</p>
                 <div class="image-grid">
-                    <img src="../imagens/sobre/trabalhos/ferramentas.jpg" alt="Serviço 6" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/ferramentas.jpg" alt="Serviço 6"
+                        onclick="expandirImagem(this)">
                 </div>
             </div>
         </div>
@@ -191,23 +196,23 @@
     </div>
 
     <!-- Lightbox -->
-<div id="lightbox" class="lightbox" onclick="fecharLightbox()">
-    <span class="close">&times;</span>
-    <img id="lightbox-img" src="" alt="Imagem Expandida">
-</div>
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagem Expandida">
+    </div>
 
-<script>
-    function expandirImagem(img) {
-        var lightbox = document.getElementById("lightbox");
-        var lightboxImg = document.getElementById("lightbox-img");
-        lightbox.style.display = "flex"; // Exibe o lightbox
-        lightboxImg.src = img.src; // Define a imagem clicada
-    }
+    <script>
+        function expandirImagem(img) {
+            var lightbox = document.getElementById("lightbox");
+            var lightboxImg = document.getElementById("lightbox-img");
+            lightbox.style.display = "flex"; // Exibe o lightbox
+            lightboxImg.src = img.src; // Define a imagem clicada
+        }
 
-    function fecharLightbox() {
-        document.getElementById("lightbox").style.display = "none"; // Esconde o lightbox
-    }
-</script>
+        function fecharLightbox() {
+            document.getElementById("lightbox").style.display = "none"; // Esconde o lightbox
+        }
+    </script>
 
 
 </body>
