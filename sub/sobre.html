@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,14 @@
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
         }
+
         body {
             text-align: center;
             background: url('../imagens/sobre/plano_de_fundo.jpeg') no-repeat center center fixed;
             background-size: cover;
             color: white;
         }
+
         .header {
             background-color: rgba(33, 33, 33, 0.9);
             color: white;
@@ -24,6 +27,7 @@
             font-size: 24px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .container {
             padding: 20px;
             background: rgba(0, 0, 0, 0.7);
@@ -32,16 +36,19 @@
             margin-top: 50px;
             max-width: 800px;
         }
+
         .about-text {
             margin-bottom: 20px;
             font-size: 18px;
         }
+
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
+
         .gallery-item {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
@@ -49,23 +56,69 @@
             max-width: 300px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
+
         .gallery-title {
             font-size: 16px;
             margin-bottom: 10px;
         }
+
         .gallery-description {
             font-size: 14px;
             margin-bottom: 10px;
         }
+
         .image-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
         }
+
         .image-grid img {
             width: 100%;
             border-radius: 5px;
         }
+
+
+
+        .single-image img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 10px;
+        }
+
+
+        /* Lightbox - Fundo escuro */
+.lightbox {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Imagem expandida */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Botão de fechar */
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+
         .back-button {
             display: block;
             margin: 20px auto;
@@ -79,50 +132,84 @@
             font-size: 18px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
         }
+
         .back-button:hover {
             background-color: #0277bd;
         }
     </style>
 </head>
+
 <body>
     <div class="header">Sobre Nós</div>
     <div class="container">
         <div class="about-text">
-            <p>Bem-vindo à nossa oficina mecânica! Com anos de experiência, oferecemos serviços de alta qualidade para garantir a segurança e o bom desempenho do seu veículo.</p>
+            <p>Bem-vindo à nossa oficina mecânica! Com anos de experiência, oferecemos serviços de alta qualidade para
+                garantir a segurança e o bom desempenho do seu veículo.</p>
         </div>
         <div class="gallery">
-            <div class="gallery-item">
-                <h3 class="gallery-title">Serviços Realizados</h3>
-                <p class="gallery-description">Confira alguns dos serviços que realizamos para garantir a melhor manutenção para o seu carro.</p>
-                <div class="image-grid">
-                    <img src="servico1.jpg" alt="Serviço 1">
-                    <img src="servico2.jpg" alt="Serviço 2">
-                    <img src="servico3.jpg" alt="Serviço 3">
-                    <img src="servico4.jpg" alt="Serviço 4">
+            <div class="gallery-item single-image">
+                <h3 class="gallery-title">Fundador</h3>
+                <p class="gallery-description">Roberto Santos tem ampla experiência em mecânica de motores ciclo Diesel e Otto, além de expertise em funilaria e pintura automotiva.</p>
+                <div class="image-single">
+                    <img src="../imagens/sobre/fundador.jpg" alt="Destaque Especial" onclick="expandirImagem(this)">
                 </div>
             </div>
             <div class="gallery-item">
-                <h3 class="gallery-title">Nossa Equipe</h3>
-                <p class="gallery-description">Conheça os profissionais que fazem a diferença e garantem um serviço de excelência.</p>
+                <h3 class="gallery-title">Serviços Realizados</h3>
+                <p class="gallery-description">Confira alguns dos serviços que realizamos para garantir a melhor
+                    manutenção para o seu carro.</p>
                 <div class="image-grid">
-                    <img src="equipe1.jpg" alt="Funcionário 1">
-                    <img src="equipe2.jpg" alt="Funcionário 2">
-                    <img src="equipe3.jpg" alt="Funcionário 3">
-                    <img src="equipe4.jpg" alt="Funcionário 4">
+                    <img src="../imagens/sobre/trabalhos/astra.jpg" alt="Serviço 1" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/passat_variant.jpg" alt="Serviço 2" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/gol1.jpg" alt="Serviço 3" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/gol2.jpg" alt="Serviço 4" onclick="expandirImagem(this)">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <h3 class="gallery-title">Serviços Realizados</h3>
+                <p class="gallery-description">restauraçoes.</p>
+                <div class="image-grid">
+                    <img src="../imagens/sobre/trabalhos/fusca1.jpg" alt="Serviço 1" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/fusca2.jpg" alt="Serviço 2" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/fusca3.jpg" alt="Serviço 3" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/fusca4.jpg" alt="Serviço 4" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/caminhao1.jpg" alt="Serviço 5" onclick="expandirImagem(this)">
+                    <img src="../imagens/sobre/trabalhos/caminhao2.jpg" alt="Serviço 6" onclick="expandirImagem(this)">
                 </div>
             </div>
             <div class="gallery-item">
                 <h3 class="gallery-title">Instalações</h3>
-                <p class="gallery-description">Nosso espaço é equipado com tecnologia de ponta para oferecer um serviço eficiente e seguro.</p>
+                <p class="gallery-description">Nosso espaço é equipado com tecnologia de ponta para oferecer um serviço
+                    eficiente e seguro.</p>
                 <div class="image-grid">
-                    <img src="instalacao1.jpg" alt="Instalação 1">
-                    <img src="instalacao2.jpg" alt="Instalação 2">
-                    <img src="instalacao3.jpg" alt="Instalação 3">
-                    <img src="instalacao4.jpg" alt="Instalação 4">
+                    <img src="../imagens/sobre/trabalhos/ferramentas.jpg" alt="Serviço 6" onclick="expandirImagem(this)">
                 </div>
             </div>
         </div>
-        <a href="../index.html" class="back-button" target="_self">Voltar</a>
     </div>
+    <a href="../index.html" class="back-button" target="_self">Voltar</a>
+    </div>
+
+    <!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Imagem Expandida">
+</div>
+
+<script>
+    function expandirImagem(img) {
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImg = document.getElementById("lightbox-img");
+        lightbox.style.display = "flex"; // Exibe o lightbox
+        lightboxImg.src = img.src; // Define a imagem clicada
+    }
+
+    function fecharLightbox() {
+        document.getElementById("lightbox").style.display = "none"; // Esconde o lightbox
+    }
+</script>
+
+
 </body>
+
 </html>
