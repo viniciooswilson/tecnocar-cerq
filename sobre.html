@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Oficina Mecânica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            text-align: center;
+            background: url('imagens/sobre/plano_de_fundo.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .header {
+            background-color: rgba(33, 33, 33, 0.9);
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 50px;
+            max-width: 800px;
+        }
+        .about-text {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 300px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .gallery-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .gallery-description {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+        .image-grid img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px;
+            width: 80%;
+            max-width: 300px;
+            background-color: #0288d1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .back-button:hover {
+            background-color: #0277bd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Sobre Nós</div>
+    <div class="container">
+        <div class="about-text">
+            <p>Bem-vindo à nossa oficina mecânica! Com anos de experiência, oferecemos serviços de alta qualidade para garantir a segurança e o bom desempenho do seu veículo.</p>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <h3 class="gallery-title">Serviços Realizados</h3>
+                <p class="gallery-description">Confira alguns dos serviços que realizamos para garantir a melhor manutenção para o seu carro.</p>
+                <div class="image-grid">
+                    <img src="servico1.jpg" alt="Serviço 1">
+                    <img src="servico2.jpg" alt="Serviço 2">
+                    <img src="servico3.jpg" alt="Serviço 3">
+                    <img src="servico4.jpg" alt="Serviço 4">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <h3 class="gallery-title">Nossa Equipe</h3>
+                <p class="gallery-description">Conheça os profissionais que fazem a diferença e garantem um serviço de excelência.</p>
+                <div class="image-grid">
+                    <img src="equipe1.jpg" alt="Funcionário 1">
+                    <img src="equipe2.jpg" alt="Funcionário 2">
+                    <img src="equipe3.jpg" alt="Funcionário 3">
+                    <img src="equipe4.jpg" alt="Funcionário 4">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <h3 class="gallery-title">Instalações</h3>
+                <p class="gallery-description">Nosso espaço é equipado com tecnologia de ponta para oferecer um serviço eficiente e seguro.</p>
+                <div class="image-grid">
+                    <img src="instalacao1.jpg" alt="Instalação 1">
+                    <img src="instalacao2.jpg" alt="Instalação 2">
+                    <img src="instalacao3.jpg" alt="Instalação 3">
+                    <img src="instalacao4.jpg" alt="Instalação 4">
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="back-button">Voltar</a>
+    </div>
+</body>
+</html>

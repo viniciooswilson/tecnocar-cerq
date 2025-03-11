@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnocar Serviços Automotivos</title>
     <style>
         * {
-            margin: 0; 
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
         }
+
         body {
             text-align: center;
             background: url('imagens/principal/principal2.jpeg') no-repeat center center fixed;
             background-size: cover;
             color: rgb(17, 17, 17);
         }
+
         .header {
             background-color: rgba(33, 33, 33, 0.9);
             color: white;
@@ -24,6 +27,15 @@
             font-size: 24px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        .texto {
+
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         .container {
             padding: 20px;
             background: rgba(0, 0, 0, 0.7);
@@ -31,15 +43,18 @@
             display: inline-block;
             margin-top: 50px;
         }
+
         .image-container img {
             width: 100%;
             max-width: 800px;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
+
         .buttons {
             margin-top: 20px;
         }
+
         .buttons a {
             display: block;
             background-color: #a83d0b;
@@ -54,10 +69,12 @@
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
+
         .buttons a:hover {
             background-color: #c2a477;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
+
         .buttons-emergency {
             display: block;
             background-color: #45a80b;
@@ -72,10 +89,12 @@
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
+
         .buttons-emergency:hover {
             background-color: #c2a477;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
+
         @media (min-width: 600px) {
             .buttons a {
                 display: inline-block;
@@ -84,22 +103,31 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="header">Guincho 24 Horas e Oficina Especializada <h6>CNPJ: 01.123.123/0001-89</h6></div>
+    <div class="header">Guincho 24 Horas e Oficina Especializada <h6>CNPJ: 01.123.123/0001-89</h6>
+    </div>
     <div class="header">Cerquilho - SP</div>
     <div class="container">
         <div class="image-container">
             <img src="imagens/principal/imagem_logo_nova.webp" alt="Guincho e Oficina Especializada">
         </div>
-            <div>
-                <a href="https://wa.me/5515997266112?text=Preciso de um Guincho Rapido!!!" target="_blank" class="buttons-emergency">Solicitar Guincho Imediato!</a>
-            </div>
+        <div>
+            <h1 class="texto">Oferecemos serviços de Guincho 24 Horas e Oficina Mecânica, garantindo uma solução
+                completa para todas as necessidades do seu veículo em um só lugar.</h1>
+        </div>
+        <div>
+            <a href="https://wa.me/5515997266112?text=Preciso de um Guincho Rapido!!!" target="_blank"
+                class="buttons-emergency">Solicitar Guincho Imediato!</a>
+        </div>
         <div class="buttons">
             <a href="servicos.html" target="_self">Serviços</a>
-            <a href="https://www.google.com/maps/place/GUINCHO,+MEC%C3%82NICA+E+FUNILARIA+TECNOCAR+CERQUILHO/@-23.1697781,-47.7550277,15z/data=!4m6!3m5!1s0x94c60d39bc8fab77:0xfcea3426dc44e31!8m2!3d-23.1697781!4d-47.7550277!16s%2Fg%2F11ghq392g1?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">Localização</a>
+            <a href="https://www.google.com/maps/place/GUINCHO,+MEC%C3%82NICA+E+FUNILARIA+TECNOCAR+CERQUILHO/@-23.1697781,-47.7550277,15z/data=!4m6!3m5!1s0x94c60d39bc8fab77:0xfcea3426dc44e31!8m2!3d-23.1697781!4d-47.7550277!16s%2Fg%2F11ghq392g1?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+                target="_blank">Localização</a>
             <a href="https://wa.me/5515997266112?text=Quero Agendar ou Solicitar Orçamento" target="_blank">WhatsApp</a>
             <a href="tel:+5515997266112">Telefone</a>
         </div>
     </div>
 </body>
+
 </html>
